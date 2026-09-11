@@ -5,8 +5,8 @@ records for an anonymized research artifact studying null controls for sparse
 autoencoder (SAE) ablations at DINOv2 register tokens.
 
 > **Release status:** the repository is private while the manuscript remains
-> double-blind. A project-level license and final citation metadata must be
-> added before it is made public.
+> double-blind. Keep the repository and draft release private until the review
+> process permits disclosure; final citation metadata can then be added.
 
 ## What is included
 
@@ -52,6 +52,13 @@ This restores ignored files into their expected locations:
 - raw per-image metrics, selection audits, reconstruction tables, and run logs
   under `results/`.
 
+The draft release also provides a single
+`null-problem-sae-ablation-complete-v0.1.0.zip` for offline transfer. It contains
+the exact tracked GitHub snapshot, a restorable Git bundle, all compact and raw
+results, and all 15 SAE checkpoint weight files. It does not contain
+credentials, virtual environments, caches, ImageNet samples, or Hugging Face
+base-model weights.
+
 See [`docs/artifacts.md`](docs/artifacts.md) for the Git/release boundary and
 verification procedure.
 
@@ -92,7 +99,8 @@ full row-level evidence is checksum-pinned in the release archives.
 
 ## Licenses and attribution
 
-Third-party notices and preserved license text are in [`NOTICE.md`](NOTICE.md)
-and [`LICENSES/`](LICENSES/). A project-level code and data/paper license has not
-yet been selected, so no permission beyond applicable law is granted for the
-original material at this stage.
+Original code is distributed under the [MIT License](LICENSE). Except where
+otherwise noted, original paper and research-result material, including the
+project-produced SAE checkpoint weights, is distributed under
+[CC BY 4.0](LICENSE-PAPER-DATA.md). Third-party notices and preserved license
+text are in [`NOTICE.md`](NOTICE.md) and [`LICENSES/`](LICENSES/).

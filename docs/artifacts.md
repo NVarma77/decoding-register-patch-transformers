@@ -34,6 +34,22 @@ its tracked `config.json`.
 
 The archives do not contain Hugging Face base-model weights or dataset samples.
 
+## Complete ZIP
+
+`null-problem-sae-ablation-complete-v0.1.0.zip` is the self-contained transfer
+copy. It combines:
+
+- the exact files tracked at the source Git commit;
+- a `provenance/repository.bundle` containing the complete Git history;
+- all compact and raw result records;
+- all 15 `ae.pt` checkpoint files;
+- `ARCHIVE_MANIFEST.tsv`, with the byte size and SHA-256 digest of every other
+  file in the ZIP.
+
+The ZIP deliberately excludes credentials, local environments, caches,
+ImageNet samples, Hugging Face base-model weights, and unrelated workspace
+files.
+
 ## Build and verify
 
 Maintainers with access to the source workspace can build deterministic
@@ -43,8 +59,9 @@ archives with:
 bash scripts/build_release_assets.sh v0.1.0
 ```
 
-The command emits the two archives, an inventory, and `SHA256SUMS` under the
-ignored `release-assets/` directory. Verify before upload with:
+The command emits the two component archives, the complete ZIP, an inventory,
+and `SHA256SUMS` under the ignored `release-assets/` directory. Verify before
+upload with:
 
 ```bash
 cd release-assets

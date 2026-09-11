@@ -9,10 +9,12 @@ source_date_epoch=${SOURCE_DATE_EPOCH:-0}
 
 results_name="null-problem-sae-ablation-results-${release_tag}.tar.zst"
 checkpoints_name="null-problem-sae-ablation-checkpoints-${release_tag}.tar.zst"
+complete_name="null-problem-sae-ablation-complete-${release_tag}.zip"
 results_archive="$output_dir/$results_name"
 checkpoints_archive="$output_dir/$checkpoints_name"
+complete_archive="$output_dir/$complete_name"
 
-for command_name in find sort tar zstd sha256sum; do
+for command_name in cp find git sha256sum sort stat tar touch zip zstd; do
     if ! command -v "$command_name" >/dev/null 2>&1; then
         echo "required command not found: $command_name" >&2
         exit 1
@@ -79,11 +81,77 @@ printf '%s\0' "${checkpoint_files[@]}" \
         --mtime="@$source_date_epoch" \
     | zstd -10 -T0 --force --quiet -o "$checkpoints_archive"
 
+if [[ -n $(git -C "$repo_root" status --porcelain --untracked-files=no) ]]; then
+    echo "tracked Git files must be clean before building the complete ZIP" >&2
+    exit 1
+fi
+
+complete_root_name="null-problem-sae-ablation-${release_tag}"
+staging_parent=$(mktemp -d "${TMPDIR:-/tmp}/null-problem-release.XXXXXX")
+cleanup() {
+    if [[ -n ${staging_parent:-} && -d $staging_parent ]]; then
+        rm -r -- "$staging_parent"
+    fi
+}
+trap cleanup EXIT
+archive_root="$staging_parent/$complete_root_name"
+mkdir -p "$archive_root"
+
+git -C "$repo_root" archive --format=tar HEAD | tar -xf - -C "$archive_root"
+
+for relative_path in "${result_files[@]}"; do
+    mkdir -p "$archive_root/$(dirname "$relative_path")"
+    cp -a "$repo_root/$relative_path" "$archive_root/$relative_path"
+done
+
+for relative_path in "${checkpoint_files[@]}"; do
+    mkdir -p "$archive_root/$(dirname "$relative_path")"
+    cp -a "$source_root/$relative_path" "$archive_root/$relative_path"
+done
+
+mkdir -p "$archive_root/provenance"
+git -C "$repo_root" rev-parse HEAD >"$archive_root/provenance/GIT_COMMIT.txt"
+git -C "$repo_root" remote get-url origin >"$archive_root/provenance/GIT_REMOTE.txt"
+git -C "$repo_root" bundle create \
+    "$archive_root/provenance/repository.bundle" --all
+
+manifest="$archive_root/ARCHIVE_MANIFEST.tsv"
+{
+    printf 'sha256\tbytes\tpath\n'
+    while IFS= read -r -d '' staged_file; do
+        relative_path=${staged_file#"$archive_root/"}
+        read -r digest _ < <(sha256sum "$staged_file")
+        printf '%s\t%s\t%s\n' \
+            "$digest" "$(stat -c '%s' "$staged_file")" "$relative_path"
+    done < <(
+        find "$archive_root" -type f ! -name ARCHIVE_MANIFEST.tsv -print0 \
+            | sort -z
+    )
+} >"$manifest"
+
+zip_epoch=$source_date_epoch
+if (( zip_epoch < 315532800 )); then
+    zip_epoch=315532800
+fi
+find "$archive_root" -exec touch -h -d "@$zip_epoch" {} +
+
+if [[ -e $complete_archive ]]; then
+    rm -- "$complete_archive"
+fi
+(
+    cd "$staging_parent"
+    find "$complete_root_name" -type f -print \
+        | LC_ALL=C sort \
+        | zip -X -9 -q "$complete_archive" -@
+)
+
 inventory="$output_dir/ARTIFACT_CONTENTS.txt"
 {
     printf 'release_tag\t%s\n' "$release_tag"
     printf 'raw_result_file_count\t%s\n' "${#result_files[@]}"
     printf 'checkpoint_file_count\t%s\n' "${#checkpoint_files[@]}"
+    printf 'complete_zip\t%s\n' "$complete_name"
+    printf 'source_git_commit\t%s\n' "$(git -C "$repo_root" rev-parse HEAD)"
     printf '\n[raw results]\n'
     printf '%s\n' "${result_files[@]}"
     printf '\n[checkpoints]\n'
@@ -92,9 +160,10 @@ inventory="$output_dir/ARTIFACT_CONTENTS.txt"
 
 (
     cd "$output_dir"
-    sha256sum "$results_name" "$checkpoints_name" >SHA256SUMS
+    sha256sum "$results_name" "$checkpoints_name" "$complete_name" \
+        >SHA256SUMS
     sha256sum -c SHA256SUMS
 )
 
-du -h "$results_archive" "$checkpoints_archive"
+du -h "$results_archive" "$checkpoints_archive" "$complete_archive"
 echo "wrote release assets to $output_dir"

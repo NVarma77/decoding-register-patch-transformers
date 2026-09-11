@@ -3,6 +3,7 @@ name = "null-problem-sae-ablation"
 version = "0.1.0"
 description = "Reproducibility code for null controls in SAE ablations at vision transformer register tokens"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10,<3.13"
 dependencies = [
     "datasets==2.21.0",

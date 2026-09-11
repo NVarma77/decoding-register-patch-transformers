@@ -25,7 +25,7 @@ gh release download "$release_tag" \
 
 (
     cd "$download_dir"
-    sha256sum -c SHA256SUMS
+    sha256sum --ignore-missing --strict -c SHA256SUMS
 )
 
 results_archive="$download_dir/null-problem-sae-ablation-results-${release_tag}.tar.zst"
