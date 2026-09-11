@@ -1,0 +1,18 @@
+{
+ "model_name": "EleutherAI/pythia-160m",
+ "layer": 7,
+ "hidden_size": 768,
+ "n_sink_vectors": 484,
+ "n_ordinary_vectors_full": 58080,
+ "sink_participation_ratio": 1.9992825984954834,
+ "ordinary_participation_ratio_full_n": 3.9898576736450195,
+ "ordinary_participation_ratio_matched_n_mean": 19.92442317008972,
+ "ordinary_participation_ratio_matched_n_min": 2.140202522277832,
+ "ordinary_participation_ratio_matched_n_max": 35.74032974243164,
+ "matched_n_repeats": 20,
+ "ordinary_pr_pooled_draw_mean": 15.35074623823166,
+ "ordinary_pr_pooled_draw_min": 1.746960163116455,
+ "ordinary_pr_pooled_draw_max": 36.66203308105469,
+ "gap_full_n": 1.995644676069056,
+ "gap_matched_n": 9.965786320094724
+}

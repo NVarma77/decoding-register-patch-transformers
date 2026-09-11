@@ -1,0 +1,63 @@
+{
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort_source": "ILSVRC/imagenet-1k validation streaming shuffle(seed=20260822, buffer_size=512); identical cohort construction to scripts/intervention_controls.py's default P0 cohort",
+  "command": "scripts/legacy_protocol_terminal_patch_replay.py --n-images 512 --device cpu --dtype float32 --streaming-shuffle-buffer 512",
+  "device": "cpu",
+  "dtype": "float32",
+  "elapsed_seconds": 398.4611415863037,
+  "elapsed_seconds_at_write": null,
+  "hardware": {
+    "cpu_count": 4,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook_description": "output of Hugging Face encoder block index 8 (zero-based)",
+  "hook_name": "enc_res_out_layer_8",
+  "layer": 8,
+  "legacy_rule": "top: recovered notebook mean-over-target-position TopK-activation rule; bottom: inferred smallest-positive-mean-active rule, not source-verifiable (see module docstring)",
+  "model_name": "facebook/dinov2-with-registers-small",
+  "model_revision": "0d9846e56b43a21fa46d7f3f5070f0506a5795a9",
+  "n_requested": 512,
+  "n_selected": 512,
+  "preprocessing": {
+    "crop_size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "BitImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "loader": "repository AutoImageProcessor via utils.utils.load_model",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 256
+    }
+  },
+  "sae_config": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/config.json",
+  "sae_path": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/ae.pt",
+  "sae_sha256": "8785d8bd438d61262794d99ce4a3cca0b97f6aa0478237cc259e52fbcc967889",
+  "seed": 20260822,
+  "split": "validation",
+  "token_indexing": {
+    "evaluated_positions": "terminal patches [257:261)",
+    "final_patch_metric": "[5:261), unchanged from intervention_controls.py; this range includes the four intervened terminal-patch positions at this operating point, unlike the true-register replay where they fall outside it",
+    "true_register_positions_for_contrast": "[1:5)",
+    "why": "population the released registers_only training selector actually drew from (hidden_states[:, -4:, :]); checkpoint is in-distribution here (FVE ~0.661)"
+  }
+}

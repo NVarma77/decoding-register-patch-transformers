@@ -1,0 +1,52 @@
+{
+  "cohort": "holdout",
+  "model_name": "facebook/dinov2-with-registers-small",
+  "n_images": 256,
+  "random_draws": 8,
+  "bootstrap_resamples": 10000,
+  "register_basis": "outputs/experiments/revision_2026_08/layer_sweep_small/register_basis_intervention_layer.npz",
+  "condition_means": {
+    "reconstruction": 0.2284609479829669,
+    "clean_top5": 7.21077925991267,
+    "clean_sign_flip": 0.22058875765651464,
+    "random_span": 13.880702697497327,
+    "decoder_permutation": 12.227188580436632,
+    "subspace_random_r1": 3.8378688448574394,
+    "subspace_random_r4": 8.532319264486432,
+    "subspace_aligned_r1": 7.245831820182502
+  },
+  "contrasts_top5_minus_control": {
+    "random_span": {
+      "mean_difference": -6.669923437584657,
+      "ci95_low": -7.030848319918732,
+      "ci95_high": -6.314970923667715,
+      "excludes_zero": true
+    },
+    "decoder_permutation": {
+      "mean_difference": -5.016409320523962,
+      "ci95_low": -5.310528406553203,
+      "ci95_high": -4.723564011437702,
+      "excludes_zero": true
+    },
+    "subspace_random_r1": {
+      "mean_difference": 3.3729104150552303,
+      "ci95_low": 3.184341369487811,
+      "ci95_high": 3.5637984879576834,
+      "excludes_zero": true
+    },
+    "subspace_random_r4": {
+      "mean_difference": -1.3215400045737624,
+      "ci95_low": -1.590744330896996,
+      "ci95_high": -1.0658559128205525,
+      "excludes_zero": true
+    },
+    "subspace_aligned_r1": {
+      "mean_difference": -0.03505256026983261,
+      "ci95_low": -0.053841617773287,
+      "ci95_high": -0.016972153098322458,
+      "excludes_zero": true
+    }
+  },
+  "mean_selected_energy_in_top_pc": 0.9973414822015911,
+  "elapsed_seconds": 14.125242948532104
+}

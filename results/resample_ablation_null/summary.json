@@ -1,0 +1,54 @@
+{
+ "model_name": "facebook/dinov2-with-registers-small",
+ "layer": 8,
+ "n_images": 511,
+ "draws": 8,
+ "intervened_slot": 1,
+ "intervened_slot_is_unanimous": true,
+ "per_slot_mean_register_norm": [
+  7.541968822479248,
+  110.81798553466797,
+  7.919333457946777,
+  7.406395435333252
+ ],
+ "treatment_norm_mean": 111.0540107831563,
+ "swap_delta_norm_mean": 4.602138701483695,
+ "rescaling_amplification_mean": 25.44800137427381,
+ "rescaling_amplification_range": [
+  7.694502579616549,
+  38.034253527866234
+ ],
+ "condition_means": {
+  "clean_top5": 7.3635779131648595,
+  "swap_slot": 0.017571051235068334,
+  "rescaled_slot": 10.5193242915485,
+  "zero_slot": 7.3421516530434445,
+  "random_span": 14.209506627164942
+ },
+ "contrasts_top5_minus_control": {
+  "swap_slot": {
+   "mean_difference": 7.346006861929791,
+   "ci95_low": 7.184707290345325,
+   "ci95_high": 7.5106674424735305,
+   "excludes_zero": true
+  },
+  "rescaled_slot": {
+   "mean_difference": -3.155746378383641,
+   "ci95_low": -3.721664870739231,
+   "ci95_high": -2.617316020127758,
+   "excludes_zero": true
+  },
+  "zero_slot": {
+   "mean_difference": 0.021426260121414572,
+   "ci95_low": 0.0017205431853255194,
+   "ci95_high": 0.03835772027474793,
+   "excludes_zero": true
+  },
+  "random_span": {
+   "mean_difference": -6.845928714000082,
+   "ci95_low": -7.536015917206231,
+   "ci95_high": -6.182971434875477,
+   "excludes_zero": true
+  }
+ }
+}

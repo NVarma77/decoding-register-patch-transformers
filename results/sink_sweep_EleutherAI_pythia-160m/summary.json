@@ -1,0 +1,228 @@
+{
+  "model_name": "EleutherAI/pythia-160m",
+  "n_layers": 12,
+  "hidden_size": 768,
+  "seq_len": 128,
+  "ordinary_start": 8,
+  "mean_sink_norm_midlayer": 293.0705368105045,
+  "mean_ordinary_norm_midlayer": 19.21212712987724,
+  "per_layer": [
+    {
+      "layer": 0,
+      "sink_participation_ratio": 17.54533623616531,
+      "ordinary_participation_ratio": 65.88104048473546,
+      "sink_top1_variance_fraction": 0.19268046477172374,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.19268046477172374,
+        "2": 0.2918477370007868,
+        "3": 0.33795122226525515,
+        "4": 0.36892613199843505,
+        "8": 0.4684769354202537,
+        "16": 0.5988974034140906,
+        "32": 0.7484722251305254,
+        "64": 0.8842408275014816
+      }
+    },
+    {
+      "layer": 1,
+      "sink_participation_ratio": 21.69879273613362,
+      "ordinary_participation_ratio": 64.44574207028987,
+      "sink_top1_variance_fraction": 0.14881190386089452,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.14881190386089452,
+        "2": 0.2635848880389939,
+        "3": 0.31039208451330247,
+        "4": 0.34296336291139834,
+        "8": 0.44676890326690816,
+        "16": 0.5806633912475171,
+        "32": 0.738442078702336,
+        "64": 0.8803074851513205
+      }
+    },
+    {
+      "layer": 2,
+      "sink_participation_ratio": 16.337266974666548,
+      "ordinary_participation_ratio": 16.73649555928561,
+      "sink_top1_variance_fraction": 0.19917780571292992,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.19917780571292992,
+        "2": 0.29376201738074714,
+        "3": 0.35933873270512146,
+        "4": 0.4011861544119982,
+        "8": 0.4998151432221065,
+        "16": 0.6230466577216752,
+        "32": 0.7703925186444633,
+        "64": 0.8981170271620024
+      }
+    },
+    {
+      "layer": 3,
+      "sink_participation_ratio": 2.109153173129729,
+      "ordinary_participation_ratio": 3.1386731822599874,
+      "sink_top1_variance_fraction": 0.6856933694981721,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.6856933694981721,
+        "2": 0.7254539204531031,
+        "3": 0.7595673622425644,
+        "4": 0.7743932106801137,
+        "8": 0.8136165159550892,
+        "16": 0.8614496751485355,
+        "32": 0.9175239768735547,
+        "64": 0.9648405815711457
+      }
+    },
+    {
+      "layer": 4,
+      "sink_participation_ratio": 2.0484353916419042,
+      "ordinary_participation_ratio": 2.909936280665103,
+      "sink_top1_variance_fraction": 0.6960656660051499,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.6960656660051499,
+        "2": 0.7345875015396561,
+        "3": 0.7671131246089735,
+        "4": 0.7815019305449098,
+        "8": 0.8194007037854136,
+        "16": 0.8657121421930521,
+        "32": 0.9199725210072798,
+        "64": 0.9658792487453233
+      }
+    },
+    {
+      "layer": 5,
+      "sink_participation_ratio": 2.0211861951920262,
+      "ordinary_participation_ratio": 3.1258812031004037,
+      "sink_top1_variance_fraction": 0.7009013458926031,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.7009013458926031,
+        "2": 0.7383909326208161,
+        "3": 0.7698613495579244,
+        "4": 0.7840182015581679,
+        "8": 0.8214445827783303,
+        "16": 0.8672460957629626,
+        "32": 0.9209041996444783,
+        "64": 0.9663368129172197
+      }
+    },
+    {
+      "layer": 6,
+      "sink_participation_ratio": 1.9944347397429234,
+      "ordinary_participation_ratio": 3.31087943977494,
+      "sink_top1_variance_fraction": 0.7057327566871384,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.7057327566871384,
+        "2": 0.7421868002069565,
+        "3": 0.7728291908973962,
+        "4": 0.7867351258417276,
+        "8": 0.8235748006331144,
+        "16": 0.8687250670208008,
+        "32": 0.9218011101183863,
+        "64": 0.9667616061755853
+      }
+    },
+    {
+      "layer": 7,
+      "sink_participation_ratio": 1.999283597714858,
+      "ordinary_participation_ratio": 3.989858788447266,
+      "sink_top1_variance_fraction": 0.7048893303350139,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.7048893303350139,
+        "2": 0.7410415606426474,
+        "3": 0.7713536837473216,
+        "4": 0.7853100317130106,
+        "8": 0.8224597075575907,
+        "16": 0.8679735232375668,
+        "32": 0.9214633844052719,
+        "64": 0.9666943938364719
+      }
+    },
+    {
+      "layer": 8,
+      "sink_participation_ratio": 2.075149875775033,
+      "ordinary_participation_ratio": 5.527194693062026,
+      "sink_top1_variance_fraction": 0.6915567047862672,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.6915567047862672,
+        "2": 0.7294433775900975,
+        "3": 0.7613590455729549,
+        "4": 0.7759741212758787,
+        "8": 0.8149859438289632,
+        "16": 0.8625975603393956,
+        "32": 0.9184549904972253,
+        "64": 0.9655425801660061
+      }
+    },
+    {
+      "layer": 9,
+      "sink_participation_ratio": 2.3548028518878756,
+      "ordinary_participation_ratio": 12.117417252160347,
+      "sink_top1_variance_fraction": 0.6479522397441431,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.6479522397441431,
+        "2": 0.691601296105047,
+        "3": 0.728704633103923,
+        "4": 0.7453592693061409,
+        "8": 0.7898918039562529,
+        "16": 0.8439865321896386,
+        "32": 0.9074254370323556,
+        "64": 0.9609479845008759
+      }
+    },
+    {
+      "layer": 10,
+      "sink_participation_ratio": 3.798883092467843,
+      "ordinary_participation_ratio": 26.752397375272885,
+      "sink_top1_variance_fraction": 0.5031211478326417,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.5031211478326417,
+        "2": 0.5679326810176099,
+        "3": 0.6217201053362589,
+        "4": 0.6448332253462306,
+        "8": 0.7077803013328563,
+        "16": 0.7834390978084282,
+        "32": 0.8714469056230206,
+        "64": 0.945857377396843
+      }
+    },
+    {
+      "layer": 11,
+      "sink_participation_ratio": 23.070821374345297,
+      "ordinary_participation_ratio": 63.24819416377426,
+      "sink_top1_variance_fraction": 0.1269454923522101,
+      "n_sink_vectors": 484,
+      "n_ordinary_vectors": 58080,
+      "sink_cumulative_variance_at_dim": {
+        "1": 0.1269454923522101,
+        "2": 0.23559929634104507,
+        "3": 0.30438506739812243,
+        "4": 0.34670012084338114,
+        "8": 0.4711396264174768,
+        "16": 0.611324369701998,
+        "32": 0.7697785907836616,
+        "64": 0.9064328656497066
+      }
+    }
+  ],
+  "elapsed_seconds": 12.57353401184082
+}

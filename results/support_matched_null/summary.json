@@ -1,0 +1,27 @@
+{
+ "model_name": "facebook/dinov2-with-registers-small",
+ "layer": 8,
+ "n_images": 511,
+ "draws": 8,
+ "patch_pr_pooled": 120.58856201171875,
+ "patch_pr_position_demeaned": 123.63256072998047,
+ "condition_means": {
+  "clean_top5": 7.363578006479371,
+  "support_matched": 10.547390481030638,
+  "random_span": 14.209506253906891
+ },
+ "contrasts_top5_minus_control": {
+  "support_matched": {
+   "mean_difference": -3.1838124745512664,
+   "ci95_low": -3.7236959700438024,
+   "ci95_high": -2.6559804995050347,
+   "excludes_zero": true
+  },
+  "random_span": {
+   "mean_difference": -6.84592824742752,
+   "ci95_low": -7.536015540448887,
+   "ci95_high": -6.182970860991226,
+   "excludes_zero": true
+  }
+ }
+}

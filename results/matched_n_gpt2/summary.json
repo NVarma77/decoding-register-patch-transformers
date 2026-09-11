@@ -1,0 +1,18 @@
+{
+ "model_name": "gpt2",
+ "layer": 8,
+ "hidden_size": 768,
+ "n_sink_vectors": 476,
+ "n_ordinary_vectors_full": 57120,
+ "sink_participation_ratio": 2.5029242038726807,
+ "ordinary_participation_ratio_full_n": 147.48529052734375,
+ "ordinary_participation_ratio_matched_n_mean": 112.25624732971191,
+ "ordinary_participation_ratio_matched_n_min": 107.343505859375,
+ "ordinary_participation_ratio_matched_n_max": 119.67947387695312,
+ "matched_n_repeats": 20,
+ "ordinary_pr_pooled_draw_mean": 110.79139556884766,
+ "ordinary_pr_pooled_draw_min": 105.16411590576172,
+ "ordinary_pr_pooled_draw_max": 119.2481689453125,
+ "gap_full_n": 58.92519250049414,
+ "gap_matched_n": 44.85003866917825
+}

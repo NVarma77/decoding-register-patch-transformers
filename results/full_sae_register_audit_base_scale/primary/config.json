@@ -1,0 +1,80 @@
+{
+  "actual_register_positions": "[1:5]",
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort": "primary",
+  "cohort_source": "ILSVRC/imagenet-1k validation streaming shuffle(seed=20260822, buffer_size=512)",
+  "cohort_validation": "primary prefix exactly matched the completed P0 IDs",
+  "command": "scripts/full_sae_register_audit.py --cohort primary --random-draws 8 --intervention-batch-size 8 --device cuda --dtype float32 --model-name facebook/dinov2-with-registers-base --full-sae saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1_32232117/trainer_0 --mistargeted-sae saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0 --root-output outputs/experiments/full_sae_register_audit_base_scale",
+  "device": "cuda",
+  "dtype": "float32",
+  "elapsed_seconds": 119.87127709388733,
+  "full_token_sae": {
+    "config": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1_32232117/trainer_0/config.json",
+    "path": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1_32232117/trainer_0/ae.pt",
+    "scope": "all 261 sequence positions",
+    "sha256": "b0107460da0c0eb2007309a6b32438e32542f7f1f1c3f6c1ed76327cdb3796db",
+    "stored_eval_results": null
+  },
+  "hardware": {
+    "cpu_count": 4,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook": "output of Hugging Face encoder block index 8 (zero-based)",
+  "hook_block_index_zero_based": 8,
+  "hook_output_expected_shape": "[batch, 261, 768]",
+  "intervention_execution": "capture the output of encoder block 8 once, then reexecute encoder blocks 9-11 and final layernorm; equivalence to the full clean forward is asserted on two images",
+  "mislabeled_registers_only_sae": {
+    "config": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0/config.json",
+    "path": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0/ae.pt",
+    "scope": "historically selected final four positions, not model register positions",
+    "sha256": "d747331ce2f9203e85c67cc15c8b32fe3112d9817c1dc55ad9ea72d46b1c6462"
+  },
+  "model_name": "facebook/dinov2-with-registers-base",
+  "model_revision": "a1d738ccfa7ae170945f210395d99dde8adb1805",
+  "n_selected": 512,
+  "patch_metric_positions": "[5:261]",
+  "preprocessing": {
+    "crop_size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "BitImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "loader": "repository AutoImageProcessor via utils.utils.load_model",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 256
+    }
+  },
+  "protocol_cohort_size": 512,
+  "random_controls": {
+    "aggregation": "mean of raw control outcomes within image before image-level paired bootstrap",
+    "decoder_permutation": "same selected register support and positive coefficients, with nonselected decoder-column identities sampled without replacement and energy-matched per register",
+    "random_draws_per_image": 8,
+    "random_span": "five random decoder columns with Normal(0,1) coefficients per register, energy-matched per register"
+  },
+  "seed": 20260822,
+  "stream_window": [
+    0,
+    512
+  ],
+  "terminal_patch_positions_used_by_mislabeled_selector": "[257:261]"
+}

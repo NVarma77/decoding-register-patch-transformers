@@ -1,0 +1,30 @@
+[project]
+name = "null-problem-sae-ablation"
+version = "0.1.0"
+description = "Reproducibility code for null controls in SAE ablations at vision transformer register tokens"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "datasets==2.21.0",
+    "huggingface-hub==0.35.3",
+    "matplotlib==3.10.6",
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "pillow==10.4.0",
+    "pyarrow==21.0.0",
+    "torch==2.5.1",
+    "transformers==4.51.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.4.2",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+pythonpath = ["."]
+testpaths = ["tests"]

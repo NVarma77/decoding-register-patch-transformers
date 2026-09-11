@@ -1,0 +1,1 @@
+Legacy-protocol (h_repl) replay at the mistargeted registers_only checkpoint's own training population, terminal patches [257:261), on the same fixed 512-image cohort used throughout this paper. See OUTCOME_MEMO.md for the headline numbers and the module docstring in legacy_protocol_terminal_patch_replay.py for the metric-scope and bottom-five-rule caveats.

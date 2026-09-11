@@ -1,0 +1,46 @@
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Notebook and editor state
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+
+# Generated experiment outputs
+outputs/
+checkpoints/
+release-assets/
+
+# Checkpoint weights are distributed as a release artifact.
+saes/**/ae.pt
+
+# Bulky raw records are distributed as a release artifact. Compact summaries,
+# configs, figures, cohort IDs, and provenance manifests remain in Git.
+results/**/*.log
+results/**/per_image_metrics.csv
+results/**/selection_audit.json
+results/**/reconstruction_fidelity.csv
+
+# LaTeX build products (the intentionally shipped manuscript.pdf is retained).
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz

@@ -1,0 +1,69 @@
+{
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort_source": "ILSVRC/imagenet-1k validation streaming shuffle(seed=20260822, buffer_size=512); source IDs are content SHA256 when dataset rows lack IDs",
+  "command": "scripts/intervention_controls.py --allow-inferred-legacy-bottom --n-images 2 --device cpu --dtype float32 --streaming-shuffle-buffer 512 --output-dir outputs/experiments/intervention_controls/repro_check",
+  "condition_set": "p0",
+  "device": "cpu",
+  "dtype": "float32",
+  "elapsed_seconds": 62.56296920776367,
+  "elapsed_seconds_at_write": null,
+  "hardware": {
+    "cpu_count": 2,
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook_name": "enc_res_out_layer_8",
+  "layer": 8,
+  "legacy_rule": "top: recovered notebook mean over register positions; bottom: inferred smallest positive active coordinates, not source-verifiable",
+  "model_name": "facebook/dinov2-with-registers-small",
+  "model_revision": "0d9846e56b43a21fa46d7f3f5070f0506a5795a9",
+  "n_requested": 2,
+  "n_selected": 2,
+  "preprocessing": {
+    "crop_size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "BitImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "loader": "repository AutoImageProcessor via utils.utils.load_model",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 256
+    }
+  },
+  "rng_seeds": {
+    "numpy": 20260822,
+    "python": 20260822,
+    "random_controls": 20260839,
+    "torch": 20260822
+  },
+  "sae_config": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/config.json",
+  "sae_path": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/ae.pt",
+  "sae_sha256": "8785d8bd438d61262794d99ce4a3cca0b97f6aa0478237cc259e52fbcc967889",
+  "seed": 20260822,
+  "split": "validation",
+  "token_indexing": {
+    "checkpoint_provenance_note": "dictionary_learning/buffer.py selected final four positions for registers_only training, which differs from the model layout; preserve this discrepancy in interpretation",
+    "patch_tokens": "[5:261]",
+    "register_tokens": "[1:5]",
+    "validation": "Dinov2WithRegistersEmbeddings inserts register tokens directly after CLS"
+  }
+}

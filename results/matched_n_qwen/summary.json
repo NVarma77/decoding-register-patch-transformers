@@ -1,0 +1,18 @@
+{
+ "model_name": "Qwen/Qwen2.5-0.5B",
+ "layer": 8,
+ "hidden_size": 896,
+ "n_sink_vectors": 493,
+ "n_ordinary_vectors_full": 59160,
+ "sink_participation_ratio": 1.1483012437820435,
+ "ordinary_participation_ratio_full_n": 113.69715118408203,
+ "ordinary_participation_ratio_matched_n_mean": 91.99274787902831,
+ "ordinary_participation_ratio_matched_n_min": 87.96512603759766,
+ "ordinary_participation_ratio_matched_n_max": 96.97403717041016,
+ "matched_n_repeats": 20,
+ "ordinary_pr_pooled_draw_mean": 91.63542098999024,
+ "ordinary_pr_pooled_draw_min": 86.14768981933594,
+ "ordinary_pr_pooled_draw_max": 95.16983032226562,
+ "gap_full_n": 99.01334845689904,
+ "gap_matched_n": 80.11203364723453
+}

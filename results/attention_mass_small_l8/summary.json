@@ -1,0 +1,38 @@
+{
+ "model_name": "facebook/dinov2-with-registers-small",
+ "layer": 8,
+ "n_images": 128,
+ "attention_block": 9,
+ "downstream_cost_reference": {
+  "clean": 0.0,
+  "removal": 7.364,
+  "addition": 0.227,
+  "random": 14.155
+ },
+ "conditions": {
+  "clean": {
+   "attn_mass_to_perturbed_register": 0.1852186184260063,
+   "attn_mass_to_all_registers": 0.2083422999130562,
+   "perturbed_register_norm": 110.663829267025,
+   "attn_mass_change_pct": 0.0
+  },
+  "removal": {
+   "attn_mass_to_perturbed_register": 8.893543621013578e-05,
+   "attn_mass_to_all_registers": 0.03058789099304704,
+   "perturbed_register_norm": 4.218313554301858,
+   "attn_mass_change_pct": -99.95198353331543
+  },
+  "addition": {
+   "attn_mass_to_perturbed_register": 0.19799548236187547,
+   "attn_mass_to_all_registers": 0.22064632747787982,
+   "perturbed_register_norm": 221.52298092842102,
+   "attn_mass_change_pct": 6.8982611167534795
+  },
+  "random": {
+   "attn_mass_to_perturbed_register": 0.10378624239820056,
+   "attn_mass_to_all_registers": 0.13041046241414733,
+   "perturbed_register_norm": 156.22304725646973,
+   "attn_mass_change_pct": -43.96554553738747
+  }
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "model_name": "facebook/dinov2-with-registers-small",
+ "layer": 8,
+ "n_images": 128,
+ "random_draws": 4,
+ "selected_contribution_norm_mean": 27.72513771057129,
+ "centered_pc1_component_norm_mean": 41.024532318115234,
+ "norm_ratio_pc1_over_selected": 1.479687213897705,
+ "scales": [
+  0.25,
+  0.5,
+  0.75,
+  1.0,
+  1.5,
+  2.0,
+  3.0,
+  4.0
+ ],
+ "curves": {
+  "aligned": [
+   {
+    "scale": 0.25,
+    "mean_cost": 0.06209351122379303
+   },
+   {
+    "scale": 0.5,
+    "mean_cost": 0.4266337491571903
+   },
+   {
+    "scale": 0.75,
+    "mean_cost": 2.056000242009759
+   },
+   {
+    "scale": 1.0,
+    "mean_cost": 7.5191916432231665
+   },
+   {
+    "scale": 1.5,
+    "mean_cost": 7.486627623438835
+   },
+   {
+    "scale": 2.0,
+    "mean_cost": 7.510712556540966
+   },
+   {
+    "scale": 3.0,
+    "mean_cost": 7.5677302200347185
+   },
+   {
+    "scale": 4.0,
+    "mean_cost": 7.649455359205604
+   }
+  ],
+  "random": [
+   {
+    "scale": 0.25,
+    "mean_cost": 1.3666464830748737
+   },
+   {
+    "scale": 0.5,
+    "mean_cost": 5.15761902788654
+   },
+   {
+    "scale": 0.75,
+    "mean_cost": 9.899764251895249
+   },
+   {
+    "scale": 1.0,
+    "mean_cost": 13.688784884288907
+   },
+   {
+    "scale": 1.5,
+    "mean_cost": 17.308139201486483
+   },
+   {
+    "scale": 2.0,
+    "mean_cost": 18.367204122478142
+   },
+   {
+    "scale": 3.0,
+    "mean_cost": 18.821358401328325
+   },
+   {
+    "scale": 4.0,
+    "mean_cost": 18.919870723038912
+   }
+  ]
+ }
+}

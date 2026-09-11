@@ -1,0 +1,33 @@
+{
+    "trainer": {
+        "trainer_class": "TopKTrainer",
+        "dict_class": "AutoEncoderTopK",
+        "lr": 0.0003,
+        "steps": 16,
+        "auxk_alpha": 0.03125,
+        "warmup_steps": 1,
+        "decay_start": 12,
+        "threshold_beta": 0.999,
+        "threshold_start_step": 1000,
+        "seed": 0,
+        "activation_dim": 384,
+        "dict_size": 64,
+        "k": 6,
+        "device": "cuda:0",
+        "layer": 8,
+        "lm_name": "facebook/dinov2-with-registers-small",
+        "wandb_name": "TopKTrainer-facebook/dinov2-with-registers-small-enc_res_out_layer_8-0.002048M-ILSVRC/imagenet-1k_trainer_0",
+        "submodule_name": "enc_res_out_layer_8"
+    },
+    "buffer": {
+        "n_ctxs": 512,
+        "ctx_len": 4,
+        "refresh_batch_size": 64,
+        "out_batch_size": 128,
+        "device": "cuda:0"
+    },
+    "run": {
+        "token_subset": "registers_only",
+        "num_register_tokens": 4
+    }
+}

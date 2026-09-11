@@ -1,0 +1,43 @@
+{
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort": "holdout",
+  "cohort_source": "ILSVRC/imagenet-1k validation streaming shuffle(seed=20260822, buffer_size=512)",
+  "command": "scripts/terminal_patch_matched_controls.py --cohort holdout --random-draws 8 --intervention-batch-size 8 --device cuda --dtype float32 --model-name facebook/dinov2-with-registers-base --sae saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0 --output-dir outputs/experiments/terminal_patch_matched_controls_base/holdout",
+  "device": "cuda",
+  "dtype": "float32",
+  "elapsed_seconds": 101.17449879646301,
+  "hardware": {
+    "cpu_count": 4,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook": "output of Hugging Face encoder block index 8 (zero-based)",
+  "hook_block_index_zero_based": 8,
+  "intervened_positions": "[257:261) -- terminal patches, the released registers_only selector's actual training population",
+  "model_name": "facebook/dinov2-with-registers-base",
+  "model_revision": "a1d738ccfa7ae170945f210395d99dde8adb1805",
+  "n_selected": 256,
+  "patch_metric_positions": "[5:257) -- excludes CLS, true registers, and the intervened terminal patches",
+  "protocol_cohort_size": 256,
+  "purpose": "Tests whether the F3 sign reversal (selected top-five removal less disruptive than matched controls) is specific to register-token geometry, or a general property of intervening on a population the SAE was actually trained on. F4 ran legacy_top5/bottom5 at this same population but never ran matched controls here.",
+  "random_controls": {
+    "aggregation": "mean of raw control outcomes within image before image-level paired bootstrap",
+    "decoder_permutation": "same selected support and positive coefficients, nonselected decoder-column identities sampled without replacement, energy-matched per row",
+    "random_draws_per_image": 8,
+    "random_span": "five random decoder columns with Normal(0,1) coefficients per row, energy-matched per row"
+  },
+  "sae": {
+    "config": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0/config.json",
+    "path": "saes/facebook_dinov2-with-registers-base/enc_res_out_layer_8_top_k_2048_6_1.0_31157977_registers_only/trainer_0/ae.pt",
+    "scope": "released registers_only checkpoint; in-distribution at terminal patches",
+    "sha256": "d747331ce2f9203e85c67cc15c8b32fe3112d9817c1dc55ad9ea72d46b1c6462"
+  },
+  "seed": 20260822,
+  "stream_window": [
+    512,
+    768
+  ],
+  "true_register_positions_for_contrast": "[1:5) -- excluded from both intervention and metric here"
+}

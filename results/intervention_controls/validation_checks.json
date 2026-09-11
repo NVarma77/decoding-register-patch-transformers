@@ -1,0 +1,44 @@
+{
+  "assertions": {
+    "delta_is_written_only_to_selected_register_rows": true,
+    "explicit_masked_decode_matches_xhat_minus_delta": true,
+    "identity_hook_matches_clean": true,
+    "patch_metric_excludes_cls_and_all_register_tokens": true,
+    "selected_bottom_coordinates_are_positive": true
+  },
+  "eligible_images": 512,
+  "identity_hook_max_abs_error": 0.0,
+  "masked_decode_max_abs_error": 2.1457672119140625e-06,
+  "n_audited_images": 512,
+  "random_active_max_nonzero_norm_error": 7.62939453125e-06,
+  "random_span_max_nonzero_norm_error": 7.62939453125e-06,
+  "same_seed_replay": {
+    "cohort_ids_match": true,
+    "condition_rows_compared": 20,
+    "max_abs_metric_error": 0.0,
+    "numeric_columns_compared": [
+      "cosine_stability",
+      "percentage_drop",
+      "reconstruction_mse",
+      "reconstruction_cosine",
+      "reconstruction_explained_variance"
+    ],
+    "replay_run": "repro_check/per_image_metrics.parquet",
+    "replayed_images": 2,
+    "seed": 20260822,
+    "selection_and_random_draws_match": true,
+    "source_run": "per_image_metrics.parquet",
+    "status": "passed"
+  },
+  "status": "passed",
+  "token_indexing": {
+    "checkpoint_provenance_note": "dictionary_learning/buffer.py selected final four positions for registers_only training, which differs from the model layout; preserve this discrepancy in interpretation",
+    "patch_tokens": "[5:261]",
+    "register_tokens": "[1:5]",
+    "validation": "Dinov2WithRegistersEmbeddings inserts register tokens directly after CLS"
+  },
+  "tolerance": 2e-05,
+  "two_image_replay_delta_top_nonselected_register_max_abs": 0.0,
+  "zero_norm_active_register_positions": 376,
+  "zero_norm_span_register_positions": 0
+}

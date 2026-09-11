@@ -1,0 +1,17 @@
+{
+  "code_revision": "unavailable-no-git-checkout",
+  "command": "scripts/full_sae_register_audit.py --aggregate --root-output outputs/experiments/full_sae_register_audit",
+  "hardware": {
+    "cpu_count": 2,
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "holdout_source": "outputs/experiments/full_sae_register_audit/holdout",
+  "hook": "output of Hugging Face encoder block index 8 (zero-based)",
+  "model_name": "facebook/dinov2-with-registers-small",
+  "model_revision": "0d9846e56b43a21fa46d7f3f5070f0506a5795a9",
+  "primary_source": "outputs/experiments/full_sae_register_audit/primary",
+  "random_draws_per_image": 8
+}

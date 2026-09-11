@@ -1,0 +1,1 @@
+{"l2_loss": 37.551587301587304, "l1_loss": 68.64285714285714, "l0": 6.0, "cossim": 0.769593253968254, "l2_ratio": 0.8045634920634921, "relative_reconstruction_bias": 1.0411706349206349, "frac_alive": 0.9990234375, "explained_variance": 0.578125, "hyperparameters": {"n_inputs": 2000, "context_length": 261, "model_img_size": 224}}

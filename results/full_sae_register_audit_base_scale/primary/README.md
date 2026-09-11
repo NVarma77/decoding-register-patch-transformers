@@ -1,0 +1,1 @@
+Corrective full-token SAE register audit. This cohort evaluates three reconstruction targets and uses clean top-five removal with eight image-level-aggregated random-span and support/magnitude-matched decoder-permutation controls. It does not establish register-only feature scope because the intervention SAE was trained on all sequence positions.

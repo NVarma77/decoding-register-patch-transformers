@@ -1,0 +1,227 @@
+{
+  "model_name": "facebook/dinov2-with-registers-base",
+  "n_images": 511,
+  "n_layers": 12,
+  "activation_dim": 768,
+  "intervention_layer": 8,
+  "image_ids_source": "interpscience_handoff/05-submission-package/data/full_sae_register_audit/primary/image_ids.json",
+  "elapsed_seconds": 14.16804027557373,
+  "per_layer": [
+    {
+      "layer": 0,
+      "register_participation_ratio": 2.601834314962981,
+      "patch_participation_ratio": 66.27568758769019,
+      "register_top1_variance_fraction": 0.5593326404805735,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.5593326404805735,
+        "2": 0.7997580710808374,
+        "3": 0.9144307836431841,
+        "4": 0.9334612241013481,
+        "8": 0.953476263603985,
+        "16": 0.9736230294510251,
+        "32": 0.989334140465571,
+        "64": 0.9967449783551072
+      }
+    },
+    {
+      "layer": 1,
+      "register_participation_ratio": 3.267218034972708,
+      "patch_participation_ratio": 54.87083046568,
+      "register_top1_variance_fraction": 0.4236441365099764,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.4236441365099764,
+        "2": 0.684871396962454,
+        "3": 0.9260331626298781,
+        "4": 0.9344772042780323,
+        "8": 0.9514845568048637,
+        "16": 0.9670283660248926,
+        "32": 0.9804781420434208,
+        "64": 0.9904950335940489
+      }
+    },
+    {
+      "layer": 2,
+      "register_participation_ratio": 3.0742703873885255,
+      "patch_participation_ratio": 62.00654590728693,
+      "register_top1_variance_fraction": 0.45447665420156613,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.45447665420156613,
+        "2": 0.7078949004119379,
+        "3": 0.9411383976247776,
+        "4": 0.9463962601020336,
+        "8": 0.9601822024424621,
+        "16": 0.9723753429714415,
+        "32": 0.9832857198603577,
+        "64": 0.991062222610787
+      }
+    },
+    {
+      "layer": 3,
+      "register_participation_ratio": 1.1531696219861987,
+      "patch_participation_ratio": 69.88950629907451,
+      "register_top1_variance_fraction": 0.9301673902280961,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.9301673902280961,
+        "2": 0.9660703313046802,
+        "3": 0.9920165791387875,
+        "4": 0.9926392387227916,
+        "8": 0.9941555628209041,
+        "16": 0.9957466773808119,
+        "32": 0.9971853343932752,
+        "64": 0.9983641513315711
+      }
+    },
+    {
+      "layer": 4,
+      "register_participation_ratio": 1.1906111550965814,
+      "patch_participation_ratio": 84.37548833127155,
+      "register_top1_variance_fraction": 0.915037802994153,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.915037802994153,
+        "2": 0.9555197711680791,
+        "3": 0.9866283978950947,
+        "4": 0.9876041313120949,
+        "8": 0.9901047232448327,
+        "16": 0.9928123568132703,
+        "32": 0.9952292323953709,
+        "64": 0.9971132956582025
+      }
+    },
+    {
+      "layer": 5,
+      "register_participation_ratio": 1.217706535506474,
+      "patch_participation_ratio": 112.38504458039388,
+      "register_top1_variance_fraction": 0.9048984845482958,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.9048984845482958,
+        "2": 0.9440878177558337,
+        "3": 0.97264599116859,
+        "4": 0.9758285957456534,
+        "8": 0.9812928564350684,
+        "16": 0.9865707520789576,
+        "32": 0.9908608651599521,
+        "64": 0.9944054409094522
+      }
+    },
+    {
+      "layer": 6,
+      "register_participation_ratio": 2.324775993679212,
+      "patch_participation_ratio": 146.22098113811884,
+      "register_top1_variance_fraction": 0.6063598236257959,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.6063598236257959,
+        "2": 0.8491763013270626,
+        "3": 0.9061839423083383,
+        "4": 0.9148619554279059,
+        "8": 0.9356356916058639,
+        "16": 0.9542153422983796,
+        "32": 0.9704762723393419,
+        "64": 0.9825969889062504
+      }
+    },
+    {
+      "layer": 7,
+      "register_participation_ratio": 1.0250701289463386,
+      "patch_participation_ratio": 138.87868852126047,
+      "register_top1_variance_fraction": 0.9876825292917571,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.9876825292917571,
+        "2": 0.9921552509619268,
+        "3": 0.9945189862816305,
+        "4": 0.9949293650441567,
+        "8": 0.9959097239458978,
+        "16": 0.9969015360529407,
+        "32": 0.9978517681745321,
+        "64": 0.9986801456080721
+      }
+    },
+    {
+      "layer": 8,
+      "register_participation_ratio": 1.0481281538502707,
+      "patch_participation_ratio": 190.8760518968647,
+      "register_top1_variance_fraction": 0.9767576677556532,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.9767576677556532,
+        "2": 0.980314588787341,
+        "3": 0.9826922111854166,
+        "4": 0.9845184779964827,
+        "8": 0.9877349965812796,
+        "16": 0.9904454917901425,
+        "32": 0.9931497285961562,
+        "64": 0.9956241482572828
+      }
+    },
+    {
+      "layer": 9,
+      "register_participation_ratio": 1.166438673750303,
+      "patch_participation_ratio": 204.94585282360717,
+      "register_top1_variance_fraction": 0.9256741743281536,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.9256741743281536,
+        "2": 0.9440196381982765,
+        "3": 0.950463906817329,
+        "4": 0.9544987175136505,
+        "8": 0.9644364019151733,
+        "16": 0.9729996204062185,
+        "32": 0.9805338944875331,
+        "64": 0.9879266912621454
+      }
+    },
+    {
+      "layer": 10,
+      "register_participation_ratio": 2.108960309415614,
+      "patch_participation_ratio": 159.6770471143691,
+      "register_top1_variance_fraction": 0.6140155626774368,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.6140155626774368,
+        "2": 0.925316865018255,
+        "3": 0.9377654946782226,
+        "4": 0.94269179016013,
+        "8": 0.9549910126071823,
+        "16": 0.9656886759157267,
+        "32": 0.9753764938097902,
+        "64": 0.9843553141358724
+      }
+    },
+    {
+      "layer": 11,
+      "register_participation_ratio": 3.6164249761161003,
+      "patch_participation_ratio": 252.52168641389002,
+      "register_top1_variance_fraction": 0.4693974393901368,
+      "n_register_vectors": 2044,
+      "n_patch_vectors": 130816,
+      "register_cumulative_variance_at_dim": {
+        "1": 0.4693974393901368,
+        "2": 0.7052832298059492,
+        "3": 0.7134135228678172,
+        "4": 0.7206867525005515,
+        "8": 0.7401233318501128,
+        "16": 0.7660215492956486,
+        "32": 0.8021682264420799,
+        "64": 0.8506095463847834
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "centering": {
+    "random_span_control": {
+      "distance_to_center_ratio_ci95": [
+        1.6790837743050968,
+        1.684865114553634
+      ],
+      "distance_to_center_ratio_mean": 1.6819318272657986,
+      "fraction_moved_closer_to_center": 0.0,
+      "n": 256
+    },
+    "removal": {
+      "distance_to_center_ratio_ci95": [
+        0.35722452573032354,
+        0.3602474916827471
+      ],
+      "distance_to_center_ratio_mean": 0.3586992471816222,
+      "fraction_moved_closer_to_center": 1.0,
+      "n": 256
+    },
+    "sign_flip": {
+      "distance_to_center_ratio_ci95": [
+        2.3499271803646176,
+        2.3528723514255776
+      ],
+      "distance_to_center_ratio_mean": 2.3513578158299793,
+      "fraction_moved_closer_to_center": 0.0,
+      "n": 256
+    }
+  },
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort": "holdout",
+  "dimensionality": {
+    "activation_dim": 384,
+    "n_patch_vectors": 65536,
+    "n_register_vectors": 1024,
+    "patch_participation_ratio": 120.25004275555048,
+    "register_cumulative_variance_at_dim": {
+      "1": 0.9922906355882309,
+      "16": 0.9982702299875179,
+      "2": 0.9955280277614293,
+      "3": 0.9967757154577991,
+      "32": 0.9988360348392038,
+      "4": 0.9970684643234141,
+      "64": 0.9993419723244699,
+      "8": 0.9976827989587211
+    },
+    "register_participation_ratio": 1.0155861985283838
+  },
+  "hardware": {
+    "cpu_count": 4,
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook": "enc_res_out_layer_8",
+  "model_name": "facebook/dinov2-with-registers-small",
+  "model_revision": "0d9846e56b43a21fa46d7f3f5070f0506a5795a9",
+  "notes": "selected_in_subspace / control_in_subspace are fractions of squared perturbation norm lying in the top-d principal subspace of the centered register cloud. distance_to_center_ratio is ||r + delta - mu|| / ||r - mu||; below 1 means the perturbation moved the register toward the cloud center. Controls are energy-matched random decoder spans drawn with the same seeds as the main audit.",
+  "random_draws": 8,
+  "sae_path": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_24096850/trainer_0/ae.pt",
+  "sae_sha256": "dc1c888451827b06e59697ada87ee7ba486b0b5441d29e58dbf5d5f920a9a149",
+  "seed": 20260822,
+  "subspace_energy_by_dim": {
+    "1": {
+      "control_in_subspace_ci95": [
+        0.005874150486135178,
+        0.0067048632271654186
+      ],
+      "control_in_subspace_mean": 0.006276098146263873,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.9906416841717163,
+        0.9914824000484539
+      ],
+      "paired_difference_mean": 0.9910798669345788,
+      "selected_in_subspace_ci95": [
+        0.9973510730383839,
+        0.9973604886329215
+      ],
+      "selected_in_subspace_mean": 0.9973559650808428
+    },
+    "16": {
+      "control_in_subspace_ci95": [
+        0.0780513411106131,
+        0.08297761604860282
+      ],
+      "control_in_subspace_mean": 0.08051628317227548,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.9145901991360187,
+        0.9194458086462756
+      ],
+      "paired_difference_mean": 0.9170189644823857,
+      "selected_in_subspace_ci95": [
+        0.9975306100871195,
+        0.9975395743233496
+      ],
+      "selected_in_subspace_mean": 0.9975352476546613
+    },
+    "2": {
+      "control_in_subspace_ci95": [
+        0.009084879336530386,
+        0.010150053295524842
+      ],
+      "control_in_subspace_mean": 0.009599437590299558,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.987224386357075,
+        0.9883028934642211
+      ],
+      "paired_difference_mean": 0.9877681250513424,
+      "selected_in_subspace_ci95": [
+        0.9973628559919887,
+        0.9973721397711658
+      ],
+      "selected_in_subspace_mean": 0.997367562641642
+    },
+    "3": {
+      "control_in_subspace_ci95": [
+        0.010677688922272208,
+        0.0117807581405648
+      ],
+      "control_in_subspace_mean": 0.01122518176927482,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.9855729351819091,
+        0.9866811707834032
+      ],
+      "paired_difference_mean": 0.9861431815538754,
+      "selected_in_subspace_ci95": [
+        0.997363746408084,
+        0.9973728719163
+      ],
+      "selected_in_subspace_mean": 0.9973683633231503
+    },
+    "32": {
+      "control_in_subspace_ci95": [
+        0.1302143515305859,
+        0.13572045483672976
+      ],
+      "control_in_subspace_mean": 0.13299865511677567,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.8620883451315771,
+        0.8676614930901807
+      ],
+      "paired_difference_mean": 0.8649313566066283,
+      "selected_in_subspace_ci95": [
+        0.9979281438899179,
+        0.9979317794799077
+      ],
+      "selected_in_subspace_mean": 0.9979300117234039
+    },
+    "4": {
+      "control_in_subspace_ci95": [
+        0.015873121939245016,
+        0.017532045399679
+      ],
+      "control_in_subspace_mean": 0.016682754755232433,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.9798637905642809,
+        0.9814867836242821
+      ],
+      "paired_difference_mean": 0.9806921080387205,
+      "selected_in_subspace_ci95": [
+        0.9973704608947096,
+        0.9973790722499053
+      ],
+      "selected_in_subspace_mean": 0.9973748627939529
+    },
+    "64": {
+      "control_in_subspace_ci95": [
+        0.23110430081193475,
+        0.23698685388980809
+      ],
+      "control_in_subspace_mean": 0.23400485247031122,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.7614061793990684,
+        0.7672577690262803
+      ],
+      "paired_difference_mean": 0.7643599392167907,
+      "selected_in_subspace_ci95": [
+        0.9983630612856044,
+        0.9983663836762723
+      ],
+      "selected_in_subspace_mean": 0.9983647916871019
+    },
+    "8": {
+      "control_in_subspace_ci95": [
+        0.050212945519483826,
+        0.05428629309532115
+      ],
+      "control_in_subspace_mean": 0.052211749363819004,
+      "n": 256,
+      "paired_difference_ci95": [
+        0.943139793370923,
+        0.9473056450766767
+      ],
+      "paired_difference_mean": 0.9452040215723662,
+      "selected_in_subspace_ci95": [
+        0.9974119431045457,
+        0.997419392255227
+      ],
+      "selected_in_subspace_mean": 0.9974157709361852
+    }
+  },
+  "wall_time_seconds": 131.4
+}

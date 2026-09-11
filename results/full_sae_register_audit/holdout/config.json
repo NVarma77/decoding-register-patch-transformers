@@ -1,0 +1,94 @@
+{
+  "actual_register_positions": "[1:5]",
+  "code_revision": "unavailable-no-git-checkout",
+  "cohort": "holdout",
+  "cohort_source": "ILSVRC/imagenet-1k validation streaming shuffle(seed=20260822, buffer_size=512)",
+  "cohort_validation": "stream positions [512:768) and source IDs are disjoint from P0",
+  "command": "scripts/full_sae_register_audit.py --cohort holdout --random-draws 8 --intervention-batch-size 8 --device cpu --dtype float32",
+  "device": "cpu",
+  "dtype": "float32",
+  "elapsed_seconds": 344.8978159427643,
+  "full_token_sae": {
+    "config": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_24096850/trainer_0/config.json",
+    "path": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_24096850/trainer_0/ae.pt",
+    "scope": "all 261 sequence positions",
+    "sha256": "dc1c888451827b06e59697ada87ee7ba486b0b5441d29e58dbf5d5f920a9a149",
+    "stored_eval_results": {
+      "cossim": 0.7890625,
+      "explained_variance": 0.80859375,
+      "frac_alive": 1.0,
+      "hyperparameters": {
+        "context_length": 261,
+        "model_img_size": 224,
+        "n_inputs": 2000
+      },
+      "l0": 6.0,
+      "l1_loss": 10.03968253968254,
+      "l2_loss": 4.376984126984127,
+      "l2_ratio": 0.785094246031746,
+      "relative_reconstruction_bias": 1.0007440476190477
+    }
+  },
+  "hardware": {
+    "cpu_count": 2,
+    "cuda_available": false,
+    "cuda_device_count": 0,
+    "platform": "Linux-6.12.95-124.187.amzn2023.x86_64-x86_64-with-glibc2.39",
+    "torch_version": "2.5.1+cu124"
+  },
+  "hook": "output of Hugging Face encoder block index 8 (zero-based)",
+  "hook_block_index_zero_based": 8,
+  "hook_output_expected_shape": "[batch, 261, 384]",
+  "intervention_execution": "capture the output of encoder block 8 once, then reexecute encoder blocks 9-11 and final layernorm; equivalence to the full clean forward is asserted on two images",
+  "mislabeled_registers_only_sae": {
+    "config": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/config.json",
+    "path": "REDACTED/saes/facebook_dinov2-with-registers-small/enc_res_out_layer_8_top_k_2048_6_1.0_22192860_registers_only/trainer_0/ae.pt",
+    "scope": "historically selected final four positions, not model register positions",
+    "sha256": "8785d8bd438d61262794d99ce4a3cca0b97f6aa0478237cc259e52fbcc967889"
+  },
+  "model_name": "facebook/dinov2-with-registers-small",
+  "model_revision": "0d9846e56b43a21fa46d7f3f5070f0506a5795a9",
+  "n_selected": 256,
+  "patch_metric_positions": "[5:261]",
+  "preprocessing": {
+    "crop_size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "BitImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "loader": "repository AutoImageProcessor via utils.utils.load_model",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 256
+    }
+  },
+  "protocol_cohort_size": 256,
+  "random_controls": {
+    "aggregation": "mean of raw control outcomes within image before image-level paired bootstrap",
+    "decoder_permutation": "same selected register support and positive coefficients, with nonselected decoder-column identities sampled without replacement and energy-matched per register",
+    "random_draws_per_image": 8,
+    "random_span": "five random decoder columns with Normal(0,1) coefficients per register, energy-matched per register"
+  },
+  "seed": 20260822,
+  "stream_window": [
+    512,
+    768
+  ],
+  "terminal_patch_positions_used_by_mislabeled_selector": "[257:261]"
+}

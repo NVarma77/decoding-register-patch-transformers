@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "seed": 20260822,
+  "replayed_images": 2,
+  "cohort_ids_match": true,
+  "selection_and_random_draws_match": true,
+  "condition_rows_compared": 20,
+  "max_abs_metric_error": 0.0,
+  "numeric_columns_compared": [
+    "cosine_stability",
+    "percentage_drop",
+    "reconstruction_mse",
+    "reconstruction_cosine",
+    "reconstruction_explained_variance"
+  ],
+  "source_run": "per_image_metrics.parquet",
+  "replay_run": "repro_check/per_image_metrics.parquet"
+}

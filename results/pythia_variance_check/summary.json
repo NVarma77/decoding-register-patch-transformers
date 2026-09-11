@@ -1,0 +1,17 @@
+{
+  "model": "EleutherAI/pythia-160m",
+  "layer": 7,
+  "n_ordinary_vectors": 29640,
+  "top1_dim_variance_fraction": 0.38723849558732765,
+  "top3_dim_variance_fraction": 0.5283871779976053,
+  "top10_dim_variance_fraction": 0.5540841226002695,
+  "top_dim_indices": [
+    393,
+    411,
+    684,
+    173,
+    290
+  ],
+  "max_over_median_dim_variance": 720.8750205051435,
+  "recomputed_participation_ratio": 3.485280187379089
+}
