@@ -1,4 +1,4 @@
-# The Null Problem in SAE Ablations at Vision Transformer Register Tokens
+# Decoding the Functional Roles of Register and High-Norm Patch Tokens in Vision Transformers
 
 This repository contains the code, paper, compact results, and provenance
 records for an anonymized research artifact studying null controls for sparse
