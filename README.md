@@ -4,6 +4,10 @@ This repository contains the code, paper, compact results, and provenance
 records for an anonymized research artifact studying null controls for sparse
 autoencoder (SAE) ablations at DINOv2 register tokens.
 
+## Model Weights
+https://huggingface.co/neelvarma/dinov2-saes 
+
+
 > **Release status:** the repository is private while the manuscript remains
 > double-blind. Keep the repository and draft release private until the review
 > process permits disclosure; final citation metadata can then be added.
